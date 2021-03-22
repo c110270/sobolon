@@ -1,0 +1,211 @@
+@import '../../base/variables';
+
+.bl_contact_inner{
+  max-width: calc(1280px - 385px * 2);
+  margin-left: auto;
+  margin-right: auto;
+
+  @include _mq(sp){
+    width: 100%;
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+}
+
+.bl_contact{
+  &_text{
+    text-align: center;
+
+    @include _mq(sp){
+      font-size: 12px;
+    }
+
+    span{
+      color: $color-mandatory;
+    }
+  }
+
+  &_item{
+    display: flex;
+     margin-top: 32px;
+
+     @include _mq(sp){
+       display: block;
+     }
+  
+     &:first-child{
+       margin-top: 24px;
+     }
+   }
+}
+
+input[type="text"],input[type="email"],input[type="textarea"]{
+	/*inputタグに対する既定の装飾を解除するプロパティ(appearance: none)*/
+		-moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: $color-white;
+    background-image: none;
+    border: transparent;
+    box-shadow: 5px 6px 15px $color-shadow-main;
+    border-radius: 2px;
+/*inheritは親要素を継承という意味*/
+		color: inherit;
+    font-family: inherit;
+    width: 100%;
+    height: 32px;
+
+    @include _mq(sp){
+      margin-top: 10px;
+    }
+
+&:focus{
+		box-shadow: none;
+    outline: none;
+	}
+  }
+
+  input[type="textarea"]{
+    height: 122px;
+  }
+
+  input[type="radio"]{
+    display: none;
+  }
+
+  input[type="checkbox"]{
+    display: none;
+    
+    & + span{
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+
+      a{
+        display: inline-block;
+        color: $color-main;
+        border-bottom: 1px solid $color-main;
+      }
+    }
+  
+    // 外枠を作成
+    & + span::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -30px;
+      transform: translateY(-50%);
+      display: block;
+      background-color: $color-white;
+      border: 1px solid $color-main;
+      width: 22px;
+      height: 22px;
+
+      @include _mq(sp){
+        width: 18px;
+        height: 18px;
+      }
+      }
+
+      & + span::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: -28px;
+        width: 18px;
+        height: 6px;
+        border-left: 2px solid $color-main;
+        border-bottom: 2px solid $color-main;
+        transform: rotate(-45deg);
+        opacity: 0;
+
+        @include _mq(sp){
+          width: 12px;
+          height: 4px;
+        }
+      }
+      &:checked + span::after{
+        opacity: 1;
+      }
+    }
+
+  input[type="submit"]{
+    -webkit-appearance: none;
+    background-image: none;
+    background-color: $color-white;
+    border: none;
+    border-radius: 0;
+    color: $color-main;
+    border: 1px solid $color-main;
+    cursor: pointer;
+    padding: 16px 54px;
+    transition: all 0.3s ease 0s;
+
+    @include _mq(sp){
+      padding: 12px 40px;
+    }
+  
+    &:hover{
+      color: $color-white;
+      background-color: $color-main;
+    }
+    
+      &:hover,
+      &:focus{
+        outline: none;
+      }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="textarea"]{
+      max-width: 320px;
+      margin-left: 18px;
+
+      @include _mq(sp){
+        margin-left: 0;
+        max-width: 100%;
+      }
+    }
+
+    .bl_contact_radio{
+      display: flex;
+      background-color: $color-white;
+      color: $color-main;
+      width: 160px;
+      margin-left: 18px;
+
+      @include _mq(sp){
+        margin-top: 10px;
+        margin-left: 0;
+      }
+    }
+
+    input[type="radio"]{
+      
+      & + span{
+        display: inline-block;
+        width: 79px;
+        height: 38px;
+        line-height: 40px;
+        text-align: center;
+      }
+          &:checked + span{
+            background-color: $color-main;
+            color: $color-white;
+          }
+    }
+
+  .bl_contact_check{
+    width: 100%;
+    text-align: center;
+
+    @include _mq(sp){
+      font-size: 12px;
+    }
+  }
+
+  .bl_contact_submit{
+    width: 100%;
+    text-align: center;
+  }

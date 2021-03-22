@@ -1,0 +1,39 @@
+@import '../../base/variables';
+
+// ラッパーモジュールに対する指定
+.bl_cardUnit{
+  display: flex;
+  flex-wrap: wrap;
+
+  @include _mq(sp){
+    display: block;
+  }
+}
+
+// 各カードに対する指定
+.bl_cardUnit__col3{
+
+  .bl_card{
+    width: calc((100% / 3) - 90px * 2 / 3);
+    margin-right: 90px;
+    box-shadow: 3px 3px 15px $color-shadow-main;
+
+    @include _mq(sp){
+      width: 100%;
+      margin-right: 0;
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    &:nth-child(3){
+      margin-right: 0;
+    }
+
+    &_text{
+      text-align: center;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      line-height: 1.5;
+    }
+  }
+}

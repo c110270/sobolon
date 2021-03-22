@@ -1,0 +1,50 @@
+@import '../../base/variables';
+
+.bl_concept{
+  display: flex;
+  align-items: center;
+
+  @include _mq(sp){
+    display: block;
+  }
+
+  &_img{
+    width: 50%;
+
+    @include _mq(sp){
+      width: 100%;
+    }
+  }
+
+  &_body{
+    width: 50%;
+
+    @include _mq(sp){
+      width: 100%;
+    }
+  }
+
+  &_ttl{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  &_text{
+    line-height: 1.5;
+    margin-top: 48px;
+
+    @include _mq(sp){
+      margin-top: 32px;
+      font-size: 14px;
+    }
+  }
+}
+
+.bl_concept__columnReverse{
+  @include _mq(sp){
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+}

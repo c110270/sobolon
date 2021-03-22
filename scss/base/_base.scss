@@ -1,0 +1,16 @@
+@import './variables';
+
+body{
+  font-size: $font-size-main;
+  font-family: $font-family-main;
+  padding-top: 70px;
+}
+
+img{
+  max-width: 100%;
+  vertical-align: top;
+}
+
+a{
+  color: $color-link-main;
+}

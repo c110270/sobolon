@@ -1,0 +1,98 @@
+@import '../base/variables';
+@import '../base/mixin';
+
+/*======================================
+header
+======================================*/
+.ly_header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $color-white;
+  width: 100%;
+  max-width: $ly-width-canvas;
+  height: 70px;
+  z-index: map-get($layer, header);
+}
+
+.ly_header_inner{
+  width: 100%;
+  max-width: $ly-width-canvas;
+  padding-left: $padding-pc;
+  padding-right: $padding-pc;
+
+  @include _mq(sp){
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+}
+
+/*======================================
+mainVisual
+======================================*/
+.ly_mainVisual{
+  width: 100%;
+  max-width: $ly-width-canvas;
+}
+
+.ly_mainVisual_inner{
+  width: 100%;
+  max-width: $ly-width-canvas;
+  padding-left: $padding-pc;
+  padding-right: $padding-pc;
+
+  @include _mq(sp){
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+}
+
+/*======================================
+contact
+======================================*/
+.ly_contact{
+  background-image: url(../img/contact.png);
+  background-size: cover;
+  width: 100%;
+  max-width: $ly-width-canvas;
+  margin-top: 225px;
+  padding-top: 72px;
+  padding-bottom: 85px;
+
+  @include _mq(sp){
+    margin-top: 100px;
+  }
+}
+
+/*======================================
+footer
+======================================*/
+.ly_footer{
+  width: 100%;
+  max-width: $ly-width-canvas;
+  background-color: $color-bg-footer;
+  padding-top: 48px;
+  padding-bottom: 18px;
+}
+
+/*======================================
+共通
+======================================*/
+.ly_main{
+  width: 100%;
+  max-width: $ly-width-canvas;
+}
+
+.ly_cont{
+  width: 100%;
+  max-width: $ly-width-canvas;
+  padding-top: 160px;
+  padding-left: $padding-pc;
+  padding-right: $padding-pc;
+
+  @include _mq(sp){
+    padding-top: 100px;
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+}

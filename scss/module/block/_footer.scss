@@ -1,0 +1,51 @@
+@import '../../base/variables';
+
+.bl_footerUnit{
+  text-align: center;
+}
+
+.bl_footer_body{
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 24px;
+
+  @include _mq(sp){
+    display: block;
+  }
+}
+
+.bl_footer_text{
+  margin-right: 24px;
+
+  @include _mq(sp){
+    margin-right: 0;
+    // text-align: center;
+  }
+
+  &:last-child{
+    margin-right: 0;
+
+    @include _mq(sp){
+      margin-top: 16px;
+    }
+  }
+}
+
+.bl_footer_icons{
+  margin-top: 37px;
+
+  @include _mq(sp){
+    margin-top: 32px;
+  }
+}
+
+.bl_footer_icon{
+  color: $color-main;
+  font-size: 22px;
+  margin-right: 40px;
+
+  &:last-child{
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,77 @@
+/*======================================
+カラー
+======================================*/
+// カラー
+$color-main: #3EA1D1;
+$color-white: #FFFFFF;
+$color-products-price: #989898;
+$color-mandatory: #E7728E;
+
+//テキスト
+$color-text-main: #333333;
+$color-text-media: #888888;
+$color-text-copyright: #888888;
+
+//タイトル
+$color-form-title: rgba(62, 161, 209, 0.7);
+
+// バックグラウンド
+$color-bg-base: #FFFFFF;
+$color-bg-footer: #F7F7F7;
+
+//ボーダー
+$color-border-main: rgba(96, 96, 96, 0.16);
+$color-border-sub: #707070;
+$color-border-media: #E0E0E0;
+
+// リンク
+$color-link-main: #333333;
+
+// シャドウ
+$color-shadow-main: rgba(96, 96, 96, 0.16);
+
+// ラベル
+$color-label-main: rgba(62, 161, 209, 0.7);
+
+
+/*======================================
+フォント
+======================================*/
+//フォントサイズ
+$font-size-main: 16px;
+
+//フォントファミリー
+$font-family-main: 'ヒラギノ明朝','ProN', serif;
+$font-family-lv2Hading: Hiragino, Mincho, Pro, serif;
+$font-family-formTitle: Hiragino, Mincho, Pro, serif;
+
+/*======================================
+レイアウト幅
+======================================*/
+$ly-width-canvas: 1280px;
+$ly-width-inner: 1200px;
+
+/*======================================
+レイアウト幅
+======================================*/
+$padding-pc: 40px;
+$padding-sp: 16px;
+
+/*======================================
+ブレイクポイント
+======================================*/
+$breakpoints:(
+  //キー値
+  'sp': 'screen and (max-width: 767px)',
+  'pc': 'screen and (min-width: 1280px)'
+)!default;
+
+/*======================================
+階層(z-index)
+======================================*/
+$layer: (
+  default:1,
+  footer: 10,
+  header: 20,
+  drawer: 40,
+);

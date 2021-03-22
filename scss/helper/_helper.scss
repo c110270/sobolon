@@ -1,0 +1,51 @@
+/*======================================
+padding
+======================================*/
+.hp_pl80{
+  padding-left: 80px;
+
+  @include _mq(sp){
+    padding-left: 0;
+  }
+}
+
+.hp_pr80{
+  padding-right: 80px;
+
+  @include _mq(sp){
+    padding-right: 0;
+  }
+}
+
+/*======================================
+margin
+======================================*/
+.hp_mt160{
+  margin-top: 160px;
+}
+
+.hp_mt48{
+  margin-top: 48px;
+}
+
+.ho_mt80_sp{
+  margin-top: 80px;
+}
+
+.hp_mt40_sp{
+  margin-top: 40px;
+}
+
+/*======================================
+text-align
+======================================*/
+.hp_tac{
+  text-align: center;
+}
+
+/*======================================
+color
+======================================*/
+.hp_colorMain{
+  color: $color-main;
+}

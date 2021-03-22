@@ -1,0 +1,44 @@
+@import '../../base/variables';
+
+.bl_productsUnit{
+  display: flex;
+  width: 100%;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include _mq(sp){
+    display: block;
+  }
+}
+
+.bl_products{
+  width: calc(100% / 3 - 80 * 2 / 3);
+  margin-right: 80px;
+  font-size: 14px;
+
+  @include _mq(sp){
+    width: 100%;
+    max-width: 260px;
+    margin-top: 48px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &:last-child{
+    margin-right: 0;
+
+    @include _mq(sp){
+      margin-right: auto;
+    }
+  }
+
+  &_text{
+    padding-top: 24px;
+  }
+
+  &_price{
+    color: $color-products-price;
+    padding-top: 14px;
+  }
+}

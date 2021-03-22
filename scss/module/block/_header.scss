@@ -1,0 +1,58 @@
+@import '../../base/variables';
+
+.bl_header{
+  display: flex;
+  
+
+  &_logo{
+    width: 120px;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 23px;
+
+    @include _mq(sp){
+      width: 100px;
+    }
+  }
+}
+
+.bl_gnav{
+
+  &_list{
+    display: flex;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    @include _mq(sp){
+      display: block;
+      position: fixed;
+      top: 70px;
+      right: 0;
+      background-color: $color-main;
+      width: 72vw;
+      height: 100vh;
+    }
+  }
+
+  &_item{
+    margin-left: 48px;
+    
+    @include _mq(sp){
+      text-align: right;
+      margin-top: 40px;
+      padding-right: 15px;
+    }
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  a{
+    @include _mq(sp){
+      color: $color-white;
+      font-size: 18px;
+    }
+  }
+}
+

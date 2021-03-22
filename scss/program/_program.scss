@@ -1,0 +1,84 @@
+.js_drawer{
+    
+  &_toggle{
+    display: none;
+    /* アイコンが×になった際にリストに上書きされるのを防ぐ */
+    z-index: map-get($layer, drawer );
+
+    @include _mq(sp){
+      display: block;
+    }
+  }
+
+    &_icon{
+      position: relative;
+      display: block;
+      height: 2px;
+      width: 30px;
+      background-color: $color-main;
+      margin-left: auto;
+      -webkit-transition: ease .5s;
+      transition: ease .5s;
+  
+      &:nth-child(1){
+        top: 22px;
+      }
+  
+      &:nth-child(2){
+        top: 22px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+  
+      &:nth-child(3){
+        top: 22px;
+      }
+    }
+}
+
+/*OPEN時の動き*/
+.js_drawer_toggle.open .js_drawer_icon:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 32px;
+ }
+ 
+ .js_drawer_toggle.open .js_drawer_icon:nth-child(2) {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: 0;
+ }
+ 
+ .js_drawer_toggle.open .js_drawer_icon:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 12px;
+ }
+
+ .js_gnav_list{
+
+  @include _mq(sp){
+    left: 100%;
+    -webkit-transition: ease .5s;
+    transition: ease .5s;
+  }
+ }
+
+ /*OPEN時の動き*/
+ .js_gnav_list.open { 
+  /* 裏側に隠していたリストを登場させる */
+    margin-left: -72vw;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;  
+  /*　スクロールしながら登場させる */
+    transform: translateZ(0);
+}
+
+.js_drawer_layer.open{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+}

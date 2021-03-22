@@ -1,0 +1,61 @@
+@import '../../base/variables';
+
+.bl_mainVisual{
+  display: flex;
+  position: relative;
+
+  @include _mq(sp){
+    display: block;
+  }
+  
+  &_img{
+    width: 82.5%;
+    padding-top: 66.666%;
+    margin-left: auto;
+    background: url(../img/mainVisual/top.png) no-repeat center center;
+    
+
+    @include _mq(sp){
+      width: 100%;
+      padding-top: 120%;
+      background-size: cover;
+    }
+
+  }
+
+  &_body{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: $color-white;
+    padding-top: 92px;
+    padding-bottom: 92px;
+
+    @include _mq(sp){
+      position: static;
+      transform: translateY(0%);
+      padding-top: 0px;
+      padding-bottom: 0px;
+      margin-top: 40px;
+      background-color: transparent;
+    }
+  }
+
+  &_ttl{
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  &_text{
+    line-height: 1.5;
+    padding-top: 28px;
+    padding-right: 40px;
+
+    @include _mq(sp){
+      padding-top: 32px;
+    }
+  }
+  
+}
